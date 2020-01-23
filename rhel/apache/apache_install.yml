@@ -25,6 +25,13 @@
       permanent: true
       state: enabled
       immediate: yes
+  
+  - name: firewalld allows 8080
+    firewalld:
+    port: 8080/tcp
+    permanent: true
+    state: enabled
+    immediate: yes
 
   - name: Apache enabled and running
     service:
